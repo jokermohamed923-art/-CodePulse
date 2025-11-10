@@ -18,11 +18,4 @@
  المتطلبات
 - Node.js >= 18.x
 - npm >= 9.x
-- SQLite (مضمنة مع المشروع، لا حاجة للتثبيت منفصل)
-
-## 🚀 كيفية التشغيل محليًا
-
-1. **Clone المشروع:**
-```bash
-git clone https://github.com/username/your-repo.git
-cd your-repo
+- SQLite 
