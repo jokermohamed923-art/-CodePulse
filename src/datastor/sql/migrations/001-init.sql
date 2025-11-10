@@ -1,0 +1,36 @@
+CREATE TABLE users (
+  id TEXT PRIMARY KEY,
+  firstName TEXT NOT NULL,
+  userName TEXT NOT NULL UNIQUE,
+  lastName TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE posts (
+  id TEXT PRIMARY KEY,
+  userId TEXT NOT NULL,
+  title TEXT NOT NULL,
+  url TEXT NOT NULL,
+  postAT INTEGER NOT NULL,
+  FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS comments (
+  id TEXT PRIMARY KEY,
+  postId TEXT NOT NULL,
+  userId TEXT NOT NULL,
+  text TEXT NOT NULL,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (postId) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE,
+  
+);
+
+CREATE TABLE IF NOT EXISTS likes (
+  id TEXT PRIMARY KEY,
+  postId TEXT NOT NULL,
+  userId TEXT NOT NULL,
+  FOREIGN KEY (postId) REFERENCES posts(id) ON DELETE CASCADE,
+  FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE,
+  UNIQUE(postId, userId) -- يمنع المستخدم من عمل لايك مرتين
+);
