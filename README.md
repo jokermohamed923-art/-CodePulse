@@ -1,4 +1,4 @@
-# Hacker News Clone - Backend 
+# Hacker News - Backend 
 
 مشروع **Hacker News Clone Backend** عبارة عن API لخدمة عرض الأخبار والقصص التقنية مع نظام تعليقات وتصويت.
 
