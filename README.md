@@ -1,6 +1,6 @@
-# Hacker News - Backend 
+# codePulse - Backend 
 
-مشروع **Hacker News Clone Backend** عبارة عن API لخدمة عرض الأخبار والقصص التقنية مع نظام تعليقات وتصويت.
+مشروع **codePulse Clone Backend** عبارة عن API لخدمة عرض الأخبار والقصص التقنية مع نظام تعليقات وتصويت.
 
 ## 📌 الميزات
 
